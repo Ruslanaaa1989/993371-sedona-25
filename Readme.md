@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Руслана Якушева](https://up.htmlacademy.ru/htmlcss/25/user/993371).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev)
 
 ---
 
