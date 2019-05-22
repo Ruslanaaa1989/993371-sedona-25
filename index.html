@@ -12,10 +12,10 @@
 			<a class="main-header-logo">
 				<img src="img/index-logo.png" width="140" height="72" alt="Седона"></a>
 			<ul class="nav-header">
-				<li><a href="inform.html">Информация</a></li>
-				<li><a href="foto&video.html">Фото и видео</a></li>
+				<li><a href="#">Информация</a></li>
+				<li><a href="#">Фото и видео</a></li>
 				<li><a href="maps.html">Карта штата</a></li>
-				<li><a href="katalogs.html">Гостиницы</a></li>
+				<li><a href="./catalog.html">Гостиницы</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -41,10 +41,52 @@
 					и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 			</div>
 		</section>
+		<div class="search-form">
+			<a class="search-container" href="#">Поиск гостиницы в Седоне</a>
+			<form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
+				<div class="forepart">
+					<label for="date">Дата заезда:</label>
+					<input class="date-field" type="text" id="date" name="in" placeholder="24 апреля 2017">
+					<div class="icon-calendar"></div>
+				</div>
+				<div class="forepart">
+					<label for="date-out">Дата выезда:</label>
+					<input class="date-field" type="text" id="date-out" name="out" placeholder="4 июля 2017">
+					<div class="icon-calendar"></div>
+				</div>
+				<div class="forepart">
+					<div class="half-width">
+						<label for="adult">Взрослые:</label>
+						<div class="unit-container">
+							<button class="btn minus-btn" type="button">
+								<span class="icon-minus"></span>
+							</button>
+							<input class="unit field" type="text" name="adults" id="adult" value="2">
+							<button class="btn plus-btn" type="button">
+								<span class="icon-plus"></span>
+							</button>
+						</div>
+					</div>
+					<div class="half-width">
+						<label for="kid">Дети:</label>
+						<div class="forepart">
+							<button class="btn minus-btn" type="button">
+								<span class="icon-minus"></span>
+							</button>
+							<input class="unit field" type="text" name="kids" id="kid" value="0">
+							<button class="btn plus-btn" type="button">
+								<span class="icon-plus"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<button class="find-info" type="button"><span>Найти</span></button>
+			</form>
+		</div>
 	</main>
 	<footer class="page-footer">
 		<div class="first-footer">
-			<a class="visit" href="sedona.html">#VISITSEDONA</a>
+			<a class="visit" href="#">#VISITSEDONA</a>
 		</div>
 		<div class="footer-social">
 			<ul>
