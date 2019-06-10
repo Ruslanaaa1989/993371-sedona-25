@@ -6,6 +6,7 @@ body {
     font-family: "PT Sans", "Arial", sans-serif;
     color: #000000;
     background: #f2f2f2;
+    text-transform: uppercase;
 }
 header,
 main,
@@ -20,11 +21,20 @@ ul{
    margin: 0;
 }
 header,
+main,
 footer {
+    width: 1200px;
     text-align: center;
+}
+.wrapper {
+    box-shadow: 0 0 30px 10px #dbdbdb;
+    width: 1200px;
+    margin: 0 auto;
 }
 .nav-header {
     background-color: #ffffff;
+    padding: 0;
+    list-style: none;
 }
 .nav-header li {
     line-height: 26px;
@@ -49,16 +59,59 @@ footer {
 .main-basic {
     text-align: center;
 }
+.main-image {
+    padding-top: 75px;
+    padding-bottom: 81px;
+}
+.background-image {
+    height: 508px;
+    background: #517ca4 url("../img/mountains.jpg") no-repeat 50% 21%;
+}
+.background-image::after {
+    content: '';
+    width: 1200px;
+    height: 57px;
+    background: url(../img/cropped pattern.png) no-repeat 50% 50%;
+}
+.class2 {
+    width: 800px;
+    height: 256px;
+    vertical-align: top;
+    line-height: 0;
+}
 .block-blue {
     line-height: 25px;
     color: #ffffff;
     background-color: #81b3d2;
 }
 .block-blue h1 {
+    margin: 0 360px;
+    margin-bottom: 28px;
+}
+.block-blue h1 {
 
 }
-.block-blue.main-images {
+.block2-blue {
+    color: #ffffff;
+    background-color: #81b3d2;
+}
+.block2-blue.main-images {
     font-size: 0;
+}
+.block2-blue h2 {
+    width: 153px;
+    margin: 0 auto 24px;
+}
+.block2-blue p {
+    margin-top: 21px;
+}
+.block2-blue:nth-child(5n) p {
+    width: 220px;
+    margin: 20px auto 0;
+}
+.block-blue img {
+    width: 800px;
+    height: 256px;
 }
 .interested {
     background: #ffffff;
@@ -69,6 +122,11 @@ footer {
 .interested-main h3 {
     line-height: 25px;
     font-size: 30px;
+}
+.search-form {
+    position: relative;
+    width: 568px;
+    margin: 0 auto;
 }
 .interested-main p {
     line-height: 24px;
@@ -88,8 +146,21 @@ footer {
     font-weight: bold;
     background: #ffffff;
 }
+.search-hotel.field{
+    line-height: 26px;
+    padding: 4px 15px 8px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    background: #f2f2f2;
+}
 .search-hotel.field:hover {
     background: #ebebeb;
+}
+.search-hotel.date {
+    width: 346px;
+    padding-right: 37px;
 }
 .search-hotel.icon-calendar {
     font-size: 21px;
@@ -108,17 +179,40 @@ footer {
 .unit-container.btn:hover {
     color: #000000;
 }
+.unit-container .minus-btn {
+    left: 112px;
+}
+.unit-container .plus-btn {
+    right: 0;
+}
+.half-width:first-child .plus-btn {
+    right: 3px;
+}
+.half-width:last-child .minus-btn {
+    left: 115px;
+}
 .search-hotel.find-info {
-    font-size: 21px;
+    font-size: 20px;
     line-height: 25px;
+    text-transform: uppercase;
     color: #ffffff;
     background: #81b3d2;
+    border: none;
+    outline: none; 
 }
 .search-hotel.find-info:hover {
     background: #669ec0;
 }
 .result-type {
     background: #ffffff;
+    list-style: none;
+}
+.result-type.photo {
+    line-height: 0;
+}
+.result-type img {
+    width: 135px;
+    height: 90px;
 }
 .hotel-text a {
     line-height: 26px;
@@ -146,6 +240,7 @@ footer {
 }
 .stock-block.stars {
     font-size: 18px;
+    float: right;
     color: #81b3d2;
 }
 .stock-block.stock  {
@@ -154,10 +249,41 @@ footer {
 footer .first-footer {
     background: #ffffff;
 }
-.footer-copyright {
+footer .visit {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+footer .footer-copyright {
     line-height: 25px;
 }
 .footer-social.social-button {
     font-size: 0;
     background-color: #81b3d2;
+}
+.footer-social span {
+    font-size: 20px;
+    line-height: 49px;
+    color: #ffffff;
+}
+.footer-social.social-button:hover {
+    background-color: #669ec0;
+}
+.soc {
+    padding: 39px 0 41px;
+    line-height: 25px;
+} 
+.soc span {
+    line-height: 40px;
+}
+.soc.button {
+    font-size: 0;
+    width: 113px;
+    height: 40px;
+    background-position: -10px -8px;
+}
+.soc.button:hover {
+    background-position: -10px -67px;
 }
