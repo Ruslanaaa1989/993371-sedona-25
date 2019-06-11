@@ -13,11 +13,13 @@
 	<div class="wrapper">
 		<header class="header-main">
 			<nav class="main-navigation">
-				<a class="main-header-logo">
-					<img src="img/index-logo.png" width="140" height="72" alt="Седона"></a>
 				<ul class="nav-header">
 					<li class="left"><a href="#">Информация</a></li>
 					<li class="left"><a href="#">Фото и видео</a></li>
+					<li class="main-header-logo">
+						<a href="./index.html">
+							<img src="img/index-logo.png" width="140" height="72" alt="Седона"></a>
+					</li>
 					<li class="right"><a href="maps.html">Карта штата</a></li>
 					<li class="right"><a href="./catalog.html">Гостиницы</a></li>
 				</ul>
@@ -49,17 +51,17 @@
 				<div class="search-form">
 					<a class="search-container" href="#">Поиск гостиницы в Седоне</a>
 					<form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
-						<div class="forepart">
+						<div class="forepart clearfix">
 							<label for="date">Дата заезда:</label>
 							<input class="date field" type="text" id="date" name="in" placeholder="24 апреля 2017">
 							<div class="icon-calendar"></div>
 						</div>
-						<div class="forepart">
+						<div class="forepart clearfix">
 							<label for="date-out">Дата выезда:</label>
 							<input class="date field" type="text" id="date-out" name="out" placeholder="4 июля 2017">
 							<div class="icon-calendar"></div>
 						</div>
-						<div class="forepart">
+						<div class="forepart clearfix">
 							<div class="half-width">
 								<label for="adult">Взрослые:</label>
 								<div class="unit-container">
@@ -74,7 +76,7 @@
 							</div>
 							<div class="half-width">
 								<label for="kid">Дети:</label>
-								<div class="forepart">
+								<div class="forepart clearfix">
 									<button class="btn minus-btn" type="button">
 										<span class="visually-hidden">-</span>
 									</button>
@@ -94,16 +96,16 @@
 			<div class="first-footer">
 				<a class="visit" href="#">#VISITSEDONA</a>
 			</div>
-			<div class="footer-social">
+			<div class="first-footer footer-social">
 				<ul>
 					<li><a class="social-button" href="#">Вконтакте</a></li>
 					<li><a class="social-button" href="#">Фейсбук</a></li>
 					<li><a class="social-button" href="#">Инстаграм</a></li>
 				</ul>
 			</div>
-			<div class="footer-copyright soc">
+			<div class="first-footer footer-copyright">
 				<span>WEBSITE BY</span>
-				<a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+				<a class="button academy" href="https://htmlacademy.ru">HTML Academy</a>
 			</div>
 		</footer>
 	</div>
