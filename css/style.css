@@ -8,6 +8,9 @@ body {
     background: #f2f2f2;
     text-transform: uppercase;
 }
+
+/* Общие стили */
+
 header,
 main,
 footer {
@@ -26,37 +29,78 @@ footer {
     width: 1200px;
     text-align: center;
 }
+header,
+footer {
+    text-align: center;
+}
 .wrapper {
     box-shadow: 0 0 30px 10px #dbdbdb;
     width: 1200px;
     margin: 0 auto;
 }
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+button{
+    display: block;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;  
+}
+
+/* Header */
+
 .nav-header {
+    display: flex;
+    flex-direction: row;
     background-color: #ffffff;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 .nav-header li {
+    display: inline-block;
+    width: 240px;
+    padding: 14px 20px 16px;
     line-height: 26px;
+    vertical-align: top;
+    box-sizing: border-box;
 }
 .nav-header.left {
+    padding-left: 73px;
     text-align: left;
 }
 .nav-header.right{
     text-align: left;
+    padding-right: 73px;
 }
 .nav-header a{
     text-decoration: none;
     color: #000000;
+    font-weight: 700;
 }
-.nav-header a:hover {
-    color: #81b3d2;
+.nav-header a:hover, 
+.nav-header a:focus {      /*Настройка фокуса и наведения*/  
+     color: #81b3d2;
+}
+.nav-header a:active {
+    color: #c1c1c1;      /*Настройка нажатия*/
 }
 .nav-header.main-header-logo {
+    padding: 0;
     font-size: 0;
     line-height: 0;
 }
+.main-header-logo a {
+    position: relative;
+    z-index: 10;
+}
+
+/* Index.html */
+
 .main-basic {
+    margin-top: -15px;
     text-align: center;
 }
 .main-image {
@@ -64,43 +108,55 @@ footer {
     padding-bottom: 81px;
 }
 .background-image {
+    position: relative;
     height: 508px;
     background: #517ca4 url("../img/mountains.jpg") no-repeat 50% 21%;
 }
 .background-image::after {
     content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 1200px;
-    height: 57px;
+    height: 58px;
     background: url(../img/cropped pattern.png) no-repeat 50% 50%;
 }
+.first-footer {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
 .class2 {
+    display: inline-block;
     width: 800px;
     height: 256px;
     vertical-align: top;
     line-height: 0;
 }
 .block-blue {
+    background: #ffffff;
+    padding-top: 60px;
+    padding-bottom: 50px;
     line-height: 25px;
-    color: #ffffff;
-    background-color: #81b3d2;
 }
 .block-blue h1 {
     margin: 0 360px;
     margin-bottom: 28px;
 }
-.block-blue h1 {
-
+.block-blue p {
+    margin: 0;
 }
 .block2-blue {
     color: #ffffff;
     background-color: #81b3d2;
 }
-.block2-blue.main-images {
+.block2-blue.main-images2 {
     font-size: 0;
 }
 .block2-blue h2 {
-    width: 153px;
-    margin: 0 auto 24px;
+    width: 154px;
+    margin: 0 auto 25px;
 }
 .block2-blue p {
     margin-top: 21px;
@@ -119,19 +175,24 @@ footer {
 .interested-main {
     padding: 55px 50px 47px;
 }
-.interested-main h3 {
-    line-height: 25px;
-    font-size: 30px;
-}
 .search-form {
     position: relative;
     width: 568px;
     margin: 0 auto;
 }
+.interested-main h3 {
+    line-height: 24px;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
 .interested-main p {
     line-height: 24px;
+    margin-bottom: 0;
 }
 .search-container {
+    display: block;
+    width: 568px;
+    margin: 0 auto;
     color: #ffffff;
     padding: 30px 0 30px;
     font-size: 21px;
@@ -141,14 +202,37 @@ footer {
     background: #766357;
 }
 .search-hotel {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 568px;
+    padding: 57px 55px;
+    margin: 0 auto;
+    box-sizing: border-box;
     line-height: 26px;
     text-align: left;
     font-weight: bold;
     background: #ffffff;
+    z-index: 1;
+}
+.search-hotel.forepart {
+    display: flex;
+    position: relative;
+    width: 458px;
+    margin-bottom: 29px;
+}
+.search-hotel.forepart:nth-child(2) {
+    margin-bottom: 30px;
+}
+.search-hotel label {
+    float: left;
+    padding: 5px 0 7px;
 }
 .search-hotel.field{
+    float: right;
     line-height: 26px;
-    padding: 4px 15px 8px;
+    padding: 5px 15px 8px;
     border: none;
     outline: none;
     box-sizing: border-box;
@@ -158,11 +242,18 @@ footer {
 .search-hotel.field:hover {
     background: #ebebeb;
 }
+.search-hotel.field:focus {
+    background: #ffffff;
+    outline: 2px solid #e5e5e5;
+}
 .search-hotel.date {
     width: 346px;
     padding-right: 37px;
 }
 .search-hotel.icon-calendar {
+    position: absolute;
+    right: 6px;
+    bottom: 0;
     font-size: 21px;
     font-weight: 200;
     line-height: 38px;
@@ -171,13 +262,41 @@ footer {
 .search-hotel.icon-calendar:hover {
     color: #000000;
 }
+.search-hotel.icon-calendar:active {
+    color: #81b3d2;
+}
+.search-hotel.half-width {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.half-width .unit {
+    width: 114px;
+    padding-left: 55px;
+    padding-right: 50px;
+}
+.half-width:first-child .unit {
+    margin-right: 3px;
+}
+.half-width:last-child label {
+    margin-left: 50px;
+}
 .unit-container.btn {
+    position: absolute;
+    top: 0;
+    padding: 6px 9px;
     line-height: 26px;
     color: #a9a9a9;
     background: #f2f2f2;
+    border: none;
+    outline: none;
 }
 .unit-container.btn:hover {
     color: #000000;
+}
+.unit-container .btn:active {
+    color: #81b3d2;
 }
 .unit-container .minus-btn {
     left: 112px;
@@ -192,6 +311,12 @@ footer {
     left: 115px;
 }
 .search-hotel.find-info {
+    display: block;
+    width: 458px;
+    margin: 0 auto;
+    margin-top: 54px;
+    padding: 14px 10px 15px;
+    box-sizing: border-box;
     font-size: 20px;
     line-height: 25px;
     text-transform: uppercase;
@@ -203,26 +328,52 @@ footer {
 .search-hotel.find-info:hover {
     background: #669ec0;
 }
+.search-hotel.find-info:active {
+    background: #5496bd;
+}
+.page-footer {
+    margin-top: -120px;
+}
+.hotel-searching {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .result-type {
     background: #ffffff;
-    list-style: none;
+    border-bottom: 1px solid #e5e5e5;
 }
 .result-type.photo {
+    display: inline-block;
+    width: 235px;
+    padding: 30px 0;
+    padding-left: 72px;
     line-height: 0;
+    box-sizing: border-box;
 }
 .result-type img {
     width: 135px;
     height: 90px;
 }
+.result-type.hotels-storage {
+    display: inline-block;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 2px;
+    width: 778px;
+}
 .hotel-text a {
+    display: inline-block;
+    margin-bottom: 7px;
     line-height: 26px;
     color: inherit;
+    text-decoration: none;
 }
 .hotel-text a:hover {
     color: #81b3d2;
 }
 .hotels-storage h1 {
-    font-size: 21px;
+    font-size: 20px;
 }
 .hotels-storage.details {
     color: #ffffff;
@@ -231,37 +382,117 @@ footer {
 .hotels-storage.details:hover {
     background: #669ec0;
 }    
-.hotels-storage.reserve-type {
+.hotels-storage {
+    display: inline-block;
+    width: 110px;
+    margin-right: 6px;
+    vertical-align: top;
+}
+.hotels-storage span {
+    display: block;
+    margin-bottom: 14px;
+}
+.hotels-storage .btn {
+    display: inline-block;
+    padding: 3px 16px;
+    margin-right: 6px;
+    vertical-align: top;
+    font-weight: 500;
+    text-decoration: none;
+}
+.hotels-storage .details {
+    color: #ffffff;
+    background-color: #81b3d2;
+}
+.hotels-storage .details:hover {
+    background: #669ec0;
+}
+.hotels-storage .details:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #5496bd;
+}
+.hotels-storage .reserve {
+    display: inline-block;
+    width: 142px;
+    vertical-align: top;
+}
+.hotels-storage .reserve-type {
     color: #ffffff;
     background-color: #766357;
 }
 .hotels-storage.reserve-type:hover {
     background: #604e43;
 }
+.hotels-storage.reserve-type:active {
+    color: rgba(255, 255, 255, 0.3);
+    background: #503e33;
+}
+.stock-block {
+    float: right;
+    width: 185px;
+    padding-top: 28px;
+}
 .stock-block.stars {
     font-size: 18px;
     float: right;
+    margin-right: 71px;
+    margin-bottom: 43px;
     color: #81b3d2;
 }
+.stars .stars-icon {
+    padding: 0;
+    margin-left: 1px;
+}
+.stars .stars-icon::before {
+    margin: 0;
+}
 .stock-block.stock  {
+    float: right;
+    padding: 3px 13px;
+    margin-right: 72px;
     background: #f2f2f2;
+}
+
+/* Footer */
+
+.page-footer{
+    margin: 0 auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
 }
 footer .first-footer {
     background: #ffffff;
 }
 footer .visit {
+    display: block;
+    margin: 0 auto;
+    padding: 45px 0 47px;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
     text-decoration: none;
     color: #000000;
 }
+footer .footer-social {
+    padding: 36px 0 36px;
+    line-height: 0;
+}
+.footer-social .social-button {
+    display: inline-block;
+    width: 46px;
+    height: 48px;
+    margin-right: 6px;
+    vertical-align: top;
+    font-size: 0;
+    background-color: #81b3d2;
+}
 footer .footer-copyright {
     line-height: 25px;
 }
-.footer-social.social-button {
-    font-size: 0;
-    background-color: #81b3d2;
+.footer-social .social-button::first-child {
+    margin-left: 2px;
 }
 .footer-social span {
     font-size: 20px;
@@ -271,19 +502,34 @@ footer .footer-copyright {
 .footer-social.social-button:hover {
     background-color: #669ec0;
 }
-.soc {
+.footer-social.social-button:active {
+    background-color: #5496bd;
+}
+.social-button:active span {
+
+}
+.footer-copyright {
     padding: 39px 0 41px;
     line-height: 25px;
 } 
-.soc span {
+.footer-social ul {
+    display: flex;
+    margin: 0;
+}
+.footer-copyright span {
     line-height: 40px;
 }
-.soc.button {
+.footer-copyright .academy {
+    display: flex;
+    vertical-align: top;
     font-size: 0;
     width: 113px;
     height: 40px;
     background-position: -10px -8px;
 }
-.soc.button:hover {
+.footer-copyright .academy:hover {
     background-position: -10px -67px;
+}
+.footer-copyright .academy:active {
+    background-position: -10px -126px;
 }
