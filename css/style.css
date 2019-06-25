@@ -1,4 +1,4 @@
-html,
+
 body {
     font-style: normal;
     font-size: 15px;
@@ -11,91 +11,92 @@ body {
 
 /* Общие стили */
 
-header,
-main,
-footer {
-    width: 1200px;
-    margin: 0 auto; 
-}
-h1,
-h2,
-h3,
-ul{
-   margin: 0;
-}
-header,
-main,
-footer {
-    width: 1200px;
-    text-align: center;
-}
-header,
-footer {
-    text-align: center;
-}
-.wrapper {
-    box-shadow: 0 0 30px 10px #dbdbdb;
-    width: 1200px;
+.header-main,
+.main-basic,
+.page-footer {
     margin: 0 auto;
+    width: 1200px;
+    box-shadow: 0 0px 15px 0px rgb(180, 180, 180);
+}
+
+.wrapper {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .clearfix:after {
     content: '';
     display: table;
     clear: both;
 }
-button{
-    display: block;
-    background-image: url(../img/sprite.png);
-    background-repeat: no-repeat;  
+.developer .developer-logo {  
+    width: 123px;
+    height: 49px;
+    background-image: url(../img/academy.png);
+    background-repeat: no-repeat;
+    margin-left: 2px;
 }
+.developer a {
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    line-height: 26px
+}
+.developer {
+    padding-right: 98px;
+}
+
 
 /* Header */
 
-.nav-header {
-    display: flex;
-    flex-direction: row;
-    background-color: #ffffff;
-    padding: 0;
+
+.main-header-logo {
+    position: absolute;
     margin: 0;
-    list-style: none;
+    top: 0;
+    left: 600px;
 }
-.nav-header li {
+.nav-header { 
+    display: block;
+    list-style: none;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.nav-header li { 
     display: inline-block;
-    width: 240px;
+    width: 275px;
     padding: 14px 20px 16px;
     line-height: 26px;
     vertical-align: top;
     box-sizing: border-box;
 }
-.nav-header.left {
-    padding-left: 73px;
-    text-align: left;
+.nav-header .right {
+    padding-left: 60px;
+    text-align: left;    
+    }
+.nav-header .left {
+    text-align: right;
+    padding-right: 0px;
 }
-.nav-header.right{
-    text-align: left;
-    padding-right: 73px;
-}
-.nav-header a{
+.nav-header a {
     text-decoration: none;
     color: #000000;
     font-weight: 700;
+    cursor: pointer;
 }
-.nav-header a:hover, 
-.nav-header a:focus {      /*Настройка фокуса и наведения*/  
-     color: #81b3d2;
+
+.nav-header a:hover {
+    color: #81b3d2;
 }
+
 .nav-header a:active {
-    color: #c1c1c1;      /*Настройка нажатия*/
+    color: #c1c1c1;
 }
-.nav-header.main-header-logo {
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-}
-.main-header-logo a {
-    position: relative;
-    z-index: 10;
-}
+
+
+
 
 /* Index.html */
 

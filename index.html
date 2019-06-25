@@ -14,16 +14,16 @@
 		<header class="header-main">
 			<nav class="main-navigation">
 				<ul class="nav-header">
-					<li class="left"><a href="#">Информация</a></li>
-					<li class="left"><a href="#">Фото и видео</a></li>
-					<li class="main-header-logo">
-						<a href="./index.html">
-							<img src="img/index-logo.png" width="140" height="72" alt="Седона"></a>
-					</li>
-					<li class="right"><a href="maps.html">Карта штата</a></li>
-					<li class="right"><a href="./catalog.html">Гостиницы</a></li>
+					<li class="right"><a href="#">Информация</a></li>
+					<li class="right"><a href="#">Фото и видео</a></li>
+					<li class="left"><a href="maps.html">Карта штата</a></li>
+					<li class="left"><a href="./catalog.html">Гостиницы</a></li>
 				</ul>
 			</nav>
+			<div class="main-header-logo">
+				<a href="./index.html">
+					<img src="img/index-logo.png" width="140" height="72" alt="Седона"></a>
+			</div>
 		</header>
 		<main class="main-basic">
 			<section class="background-image">
@@ -42,55 +42,116 @@
 					<img src="img/nature-image.jpg" width="800" height="252" alt="Красивый вид">
 				</div>
 			</section>
-			<section class="interested">
-				<div class="interested-main">
-					<h3>Заинтересовались?</h3>
-					<p>Укажите предпологаемые даты поездки,<br>
-						и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+			<section class="block3-blue">
+				<div class="text-content one-third">
+					<div class="house">
+						<img src="img/house.png" width="75" height="72" alt="Жилье">
+					</div>
+					<h2>Жилье</h2>
+					<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 				</div>
-				<div class="search-form">
-					<a class="search-container" href="#">Поиск гостиницы в Седоне</a>
-					<form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
-						<div class="forepart clearfix">
-							<label for="date">Дата заезда:</label>
-							<input class="date field" type="text" id="date" name="in" placeholder="24 апреля 2017">
-							<div class="icon-calendar"></div>
-						</div>
-						<div class="forepart clearfix">
-							<label for="date-out">Дата выезда:</label>
-							<input class="date field" type="text" id="date-out" name="out" placeholder="4 июля 2017">
-							<div class="icon-calendar"></div>
-						</div>
-						<div class="forepart clearfix">
-							<div class="half-width">
-								<label for="adult">Взрослые:</label>
-								<div class="unit-container">
-									<button class="btn minus-btn" type="button">
-										<span class="visually-hidden">-</span>
-									</button>
-									<input class="unit field" type="text" name="adults" id="adult" value="2">
-									<button class="btn plus-btn" type="button">
-										<span class="visually-hidden">+</span>
-									</button>
-								</div>
-							</div>
-							<div class="half-width">
-								<label for="kid">Дети:</label>
-								<div class="forepart clearfix">
-									<button class="btn minus-btn" type="button">
-										<span class="visually-hidden">-</span>
-									</button>
-									<input class="unit field" type="text" name="kids" id="kid" value="0">
-									<button class="btn plus-btn" type="button">
-										<span class="visually-hidden">+</span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<button class="find-info" type="submit"><span>Найти</span></button>
-					</form>
+				<div class="text-content one-third">
+					<div class="food">
+						<img src="img/food.png" width="74" height="70" alt="Еда">
+					</div>
+					<h2>Еда</h2>
+					<p>
+						Всегда заказывайте фирменный бургер,<br>
+						вы не разочаруетесь!
+					</p>
+				</div>
+				<div class="text-content one-third">
+					<div class="gift">
+						<img src="img/gift.png" width="64" height="76" alt="Сувениры">
+					</div>
+					<h2>Сувениры</h2>
+					<p>
+						Не только китайского,<br>
+						но и местного производства!
+					</p>
 				</div>
 			</section>
+			<section class="block2-blue">
+				<div class="view-image two-third">
+					<img src="img/canyon.jpg" width="800" height="256" alt="Красивый вид">
+				</div>
+				<!--
+			 -->
+				<div class="text-content one-third">
+					<h2>Там есть мост Дьявола</h2>
+					<span>&mdash; №2 &mdash;</span>
+					<p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+				</div>
+				<section class="block4-blue">
+					<div class="text-content one-third">
+						<h2>Небольшая площадь</h2>
+						<span>&mdash; №3 &mdash;</span>
+						<p>Все достопримечательности находятся очень близко</p>
+					</div>
+					<div class="text-content one-third">
+						<h2>Красивая дорога</h2>
+						<span>&mdash; №4 &mdash;</span>
+						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					</div>
+					<div class="text-content one-third">
+						<h2>Мало туристов</h2>
+						<span>&mdash; №5 &mdash;</span>
+						<p>Большинство едет в Гранд каньон и толпится там</p>
+					</div>
+				</section>
+				<section class="interested">
+					<div class="interested-main">
+						<h3>Заинтересовались?</h3>
+						<p>Укажите предпологаемые даты поездки,<br>
+							и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+					</div>
+					<div class="search-form">
+						<a class="search-container" href="#">Поиск гостиницы в Седоне</a>
+						<form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
+							<div class="forepart clearfix">
+								<label for="date">Дата заезда:</label>
+								<input class="date field" type="text" id="date" name="in" placeholder="24 апреля 2017">
+								<div class="icon-calendar"></div>
+							</div>
+							<div class="forepart clearfix">
+								<label for="date-out">Дата выезда:</label>
+								<input class="date field" type="text" id="date-out" name="out"
+									placeholder="4 июля 2017">
+								<div class="icon-calendar"></div>
+							</div>
+							<div class="forepart clearfix">
+								<div class="half-width">
+									<label for="adult">Взрослые:</label>
+									<div class="unit-container">
+										<button class="btn minus-btn" type="button">
+											<span class="visually-hidden">-</span>
+										</button>
+										<input class="unit field" type="text" name="adults" id="adult" value="2">
+										<button class="btn plus-btn" type="button">
+											<span class="visually-hidden">+</span>
+										</button>
+									</div>
+								</div>
+								<div class="half-width">
+									<label for="kid">Дети:</label>
+									<div class="forepart clearfix">
+										<button class="btn minus-btn" type="button">
+											<span class="visually-hidden">-</span>
+										</button>
+										<input class="unit field" type="text" name="kids" id="kid" value="0">
+										<button class="btn plus-btn" type="button">
+											<span class="visually-hidden">+</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<button class="find-info" type="submit"><span>Найти</span></button>
+						</form>
+					</div>
+				</section>
+				<div class="map-block">
+					<img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны">
+				</div>
 		</main>
 		<footer class="page-footer">
 			<a class="visit" href="#">#VISITSEDONA</a>
@@ -102,8 +163,10 @@
 				</ul>
 			</div>
 			<div class="developer">
-				<span>WEBSITE BY</span>
-				<a href="https://htmlacademy.ru">HTML Academy</a>
+				<a href="https://htmlacademy.ru">
+					<span>WEBSITE BY</span>
+					<div class="developer-logo"></div>
+				</a>
 			</div>
 		</footer>
 	</div>
